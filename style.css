@@ -1,0 +1,135 @@
+html, body{
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(50, 50, 50);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: rgb(62, 62, 62);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track{
+    opacity: 0;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    color: white;
+}
+
+.body1{
+    color: white;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+
+.box{
+    background-color: rgb(255, 104, 74);
+    width: 200px;
+    height: 200px;
+}
+
+.boxes{
+    display: flex;
+}
+
+.box:nth-child(2){
+    transition-delay: 200ms;
+}
+.box:nth-child(3){
+    transition-delay: 400ms;
+}
+.box:nth-child(4){
+    transition-delay: 600ms;
+}
+
+.body2{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.body2 > .description-area > .title-content{
+    font-size: 30px;
+    margin-top: 20%;
+}
+
+.body2 > .description-area > .desc-content{
+    margin-top: 10%;
+    font-size: 20px;
+}
+
+.body2 > .image-area{
+    width: 50vw;
+    height: 100%;
+}
+
+.image-area{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body2 > .description-area{
+    display: grid;
+    color: white;
+    width: 50vw;
+    grid-template-rows: 150px 500px;
+    grid-row-start: auto;
+}
+
+.body3{
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 50% 50%;
+    grid-row-start: auto;
+    color: white;
+    place-items: center;
+}
+
+.body3 > .image-area{
+
+}
+
+.body3 > .description-area{
+    
+}
+
+.hidden{
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
